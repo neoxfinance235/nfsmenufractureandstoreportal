@@ -1,0 +1,53 @@
+.Login-div header {
+    margin-bottom: 5px;
+}
+
+.Login-div .main-div {
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    transform: translateY(60%);
+}
+
+.Login-div fieldset {
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.Login-div .main-div input{
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    margin-top: 5px;
+    font-size: 1rem;
+    padding: 2px;
+}
+.Login-div .main-div .btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Login-div .main-div .btn-box button{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border: 2px solid white;
+    box-shadow:0px 0px 5px 0.1px white ;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.Login-div .main-div .btn-box button:hover{
+    color: blue;
+    border-color: blue;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0.1px blue;
+}

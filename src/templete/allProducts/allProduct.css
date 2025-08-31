@@ -1,0 +1,60 @@
+.all-main-div {
+    padding: 5px;
+    display: block;
+    margin: auto;
+    margin: auto;
+}
+
+.all-main-div .card {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.all-main-div .card img {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    margin-top: 5px;
+    margin-right: 20px;
+
+}
+.all-main-div .card .product-value{
+    width: auto;
+    margin-top: 5px;
+}
+.all-main-div .card .product-value .box{
+    padding: 5px;
+}
+.all-main-div .card .product-value .box span{
+    margin-right: 5px;
+}
+.all-main-div .card .product-value .box button{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 3px;
+    background-color: red;
+    color: yellow;
+    border: 2px solid white;
+    font-weight:800 ;
+}
+.all-main-div .card .product-value .box button:hover{
+    color: red;
+    background-color: white;
+    border: 2px solid red;
+}
+@media screen and (max-width:576px) {
+    .all-main-div .card{
+        display: block;
+    }
+    .all-main-div .card img{
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

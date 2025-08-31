@@ -1,0 +1,51 @@
+.report-div {
+    padding: 5px;
+    display: block;
+    margin: auto;
+    transform: translateY(20%);
+
+}
+
+.report-div form {
+    padding: 5px;
+}
+
+.report-div form fieldset {
+    padding: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.report-div form fieldset textarea {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+.report-div form button {
+    color: white;
+    background-color: blue;
+    border: 2px solid white;
+    padding: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.report-div form button:hover {
+    color: blue;
+    background-color: white;
+    border-color: blue;
+}
+
+@media screen and (max-width:576px) {
+    .report-div {
+        transform: translateY(30%);
+    }
+}

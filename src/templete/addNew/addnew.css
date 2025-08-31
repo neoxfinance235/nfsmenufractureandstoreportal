@@ -1,0 +1,98 @@
+.add-new{
+    padding: 5px;
+}
+.add-new form{
+    width: 100%;
+}
+.add-new form fieldset{
+    padding: 5px;
+    border: 1px solid black;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.add-new form fieldset input{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    width: 100%;
+    padding: 3px;
+}
+.add-new form fieldset textarea{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.add-new form fieldset input::placeholder{
+    color: black;
+}
+.add-new form fieldset textarea{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.add-new form fieldset .btn-box{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.add-new form fieldset .btn-box button{
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0.1px rgb(255, 255, 255);
+
+}
+.add-new form fieldset .btn-box button:hover{
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    box-shadow: 0px 0px 5px 0.1px blue;
+}
+.add-new form fieldset .gender-box{
+    width: auto;
+    padding: 10px;
+}
+.add-new form fieldset .gender-box .box{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.add-new form fieldset .gender-box .box input{
+    width: auto;
+    margin: 0;
+    margin-left: 20px;
+    font: 2rem;
+    border: 2px solid black;
+    padding: 3px;
+}
+.add-new form fieldset select{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.add-new form fieldset select option{
+    text-align: center;
+    font-size: 1rem;
+    padding: 3px;
+}
+.add-new form fieldset .type{
+    padding: 10px;
+}
+.add-new form fieldset p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.add-new form fieldset .type h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

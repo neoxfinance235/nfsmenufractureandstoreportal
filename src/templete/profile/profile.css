@@ -1,0 +1,25 @@
+.profile-div{
+    background-color: black;
+    min-height: 100%;
+    padding: 10px;
+    color: white;
+}
+.profile-div table tr{
+    padding: 10px;
+}
+.profile-div table td{
+    padding: 5px;
+}
+.profile-div h3{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.profile-div img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

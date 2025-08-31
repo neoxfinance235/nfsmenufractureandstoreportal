@@ -1,0 +1,56 @@
+.main-div {
+    width: 73%;
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    display: block;
+    margin: auto;
+}
+
+/* ////////////////////// */
+.home-main-div {
+    padding: 5px;
+}
+.home-main-div h3{
+    padding: 10px;
+    background: linear-gradient(to right , red , blue , deeppink);
+}
+
+.home-main-div .home-contrenar {
+    width: 100%;
+    margin-top: 20px;
+}
+.home-main-div .home-contrenar .card-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.home-main-div .home-contrenar .card-box .card{
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 0.1px gray inset;
+}
+.home-main-div .home-contrenar .card-box .card h4{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+.home-main-div .home-contrenar .card-box .card p{
+    text-align: center;
+    margin-top: 5px;
+}
+@media screen and (max-width:1000px) {
+    .main-div {
+        left: 0%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:576px) {
+   
+
+}
