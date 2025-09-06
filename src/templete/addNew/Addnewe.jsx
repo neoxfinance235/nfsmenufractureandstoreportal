@@ -40,8 +40,7 @@ const Addnewe = () => {
                         'Content-Type': 'multipart/form-data'
                     }
                 })
-              // resData.data.json.success === true ? window.location.reload() : 
-              alert(resData.data.json.data) 
+              resData.data.json.success === true ? window.location.reload() : alert(resData.data.json.data) 
             }
         } catch (error) {
             console.log(error)
@@ -185,7 +184,7 @@ const Addnewe = () => {
                         </div>
                         <p>*Please read the document be carefully before submit</p>
                         <div className="btn-box">
-                            <button>RESET</button>
+                            <button type='reset'>RESET</button>
                             <button type='submit' onClick={handelPostProductData}>POST</button>
                         </div>
                     </fieldset>

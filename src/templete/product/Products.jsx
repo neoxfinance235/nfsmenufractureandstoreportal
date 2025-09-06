@@ -36,9 +36,18 @@ const Products = () => {
                   console.log(error)
                 }
               }
+              const postAddCart = async (e) =>{
+                e.preventDefault()
+                try {
+                  const resData = await axios.patch(`${process.env.REACT_APP_LOCAL_F_URL}/api/send/add/cart/post/user/api/${localStorage.getItem('id')}?product_id=${product._id}`)
+                  alert(resData.data.json.data)
+                } catch (error) {
+                 console.log(error) 
+                }
+              }
               return (
                 <>
-                  <form onSubmit={buyNow}>
+                  <form >
                     <div className="product-card" key={product._id}>
                       <img src={product.productpic} alt="" className='product-image' />
                       <div className="product-value">
@@ -63,8 +72,8 @@ const Products = () => {
 
                       </div>
                       <div className="button-box">
-                        <button ><BiSolidCartAdd /></button>
-                        <button type='submit' >BUY NOW</button>
+                        <button onClick={postAddCart}><BiSolidCartAdd /></button>
+                        <button type='submit'onClick={buyNow} >BUY NOW</button>
                       </div>
                     </div>
                   </form>
