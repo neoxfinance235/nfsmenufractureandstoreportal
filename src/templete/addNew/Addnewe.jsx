@@ -17,7 +17,7 @@ const Addnewe = () => {
         e.preventDefault()
         try {
             const formData = new FormData()
-            formData.append('productsImage', productImageData)
+            formData.append('productImage', productImageData)
             formData.append('name', productData.name)
             formData.append('price', productData.price)
             formData.append('breadth', productData.breadth)
@@ -64,7 +64,7 @@ const Addnewe = () => {
                         <input type="file" accept=".jpg,.jpeg,.png,.gif" onChange={(e) => {
                             setProductImageData(e.target.files[0])
 
-                        }} name='productsImage' required />
+                        }} name='productImage' required />
                         <p>*key words is help to find out needed product fo your customers</p>
                         <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key1' placeholder='*ENTER THE KEYWORD 1' />
                         <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key2' placeholder='*ENTER THE KEYWORD 2' />
