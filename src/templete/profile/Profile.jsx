@@ -21,20 +21,28 @@ const Profile = () => {
         <img src={localStorage.getItem('profilepic')} alt="" />
         <table>
           <tr>
-            <td>NAME : </td>
+            <td>NAME  </td>
             <td>{profileData.name}</td>
           </tr>
           <tr>
-            <td>EMAIL :</td>
+            <td>EMAIL </td>
             <td>{profileData.email}</td>
           </tr>
           <tr>
-            <td>PHONE :</td>
+            <td>PHONE </td>
             <td>{profileData.phone}</td>
           </tr>
           <tr>
-            <td>RM :</td>
+            <td>RM </td>
             <td>{profileData.rm}</td>
+          </tr>
+          <tr>
+            <td>RM PHONE </td>
+            <td>{profileData.rm_phone}</td>
+          </tr>
+          <tr>
+            <td>RM EMAIL  </td>
+            <td>{profileData.rm_email}</td>
           </tr>
           <tr>
             <td>OFFICE ADDRESS</td>

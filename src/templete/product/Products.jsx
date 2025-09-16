@@ -8,7 +8,7 @@ const Products = () => {
   const getProductApi = async (e) => {
     try {
       const resdata = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/api/get/all/product/api/global/data/product/v8/${localStorage.getItem('id')}`)
-      setProducts(resdata.data.json.data)
+      resdata.data.json.success===false ? alert(resdata.data.json.data) : setProducts(resdata.data.json.data)
     } catch (error) {
       console.log(error)
     }
