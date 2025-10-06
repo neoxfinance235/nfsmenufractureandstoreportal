@@ -56,7 +56,10 @@ const Home = () => {
             <h4>REJECTED</h4>
             <p>{dashbordData.rejected}</p>
           </div>
-          
+          <div className="card">
+            <h4>NEW ORDER</h4>
+            <p>{dashbordData.neworder}</p>
+          </div>
         </div>
       </div>
     </main>
