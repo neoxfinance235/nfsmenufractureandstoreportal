@@ -26,7 +26,7 @@ const Addnewe = () => {
             formData.append('height', productData.height)
             formData.append('combo', productData.combo)
             formData.append('des', productData.des)
-            formData.append('key', `${productData.key1} , ${productData.key2} , ${productData.key4} , ${productData.key3} , ${productData.key5}`)
+            formData.append('key', `${productData.key1}`)
             formData.append('gender', productData.for)
             formData.append('type', productData.type)
             if (productImageData == null) {
@@ -67,10 +67,6 @@ const Addnewe = () => {
                         }} name='productImage' required />
                         <p>*key words is help to find out needed product fo your customers</p>
                         <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key1' placeholder='*ENTER THE KEYWORD 1' />
-                        <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key2' placeholder='*ENTER THE KEYWORD 2' />
-                        <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key3' placeholder='*ENTER THE KEYWORD 3' />
-                        <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key4' placeholder='*ENTER THE KEYWORD 4' />
-                        <input type="text" onChange={handelSetProductData} required autoComplete='off' name='key5' placeholder='*ENTER THE KEYWORD 5' />
                         <div className="gender-box">
                             <p>*Please select your targeted audiance</p>
                             <div className="box">

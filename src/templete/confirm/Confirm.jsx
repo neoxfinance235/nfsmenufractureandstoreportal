@@ -68,6 +68,14 @@ const Confirm = () => {
                       <span>ADDRESS :</span>
                       <span>{`${orders.to_address} ${orders.customer_pin} ${orders.customer_district} ${orders.customer_state} ${orders.customer_country}`}</span>
                     </div>
+                    <div className="box">
+                      <span>SHIPPING CHARGE :</span>
+                      <span>{orders.dalivary_charge}</span>
+                    </div>
+                    <div className="box">
+                      <span>PLARTFORM CHARGE :</span>
+                      <span>10%</span>
+                    </div>
                     <div className="btn-box">
                       <button onClick={cancelOrder}>CANCEL</button>
                       <button onClick={conformOrder}>CONFORM</button>

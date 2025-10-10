@@ -33,6 +33,18 @@ const Profile = () => {
             <td>{profileData.phone}</td>
           </tr>
           <tr>
+            <td>ACCOUNT</td>
+            <td>{profileData.account}</td>
+          </tr>
+          <tr>
+            <td>IFCS</td>
+            <td>{profileData.ifcs}</td>
+          </tr>
+          <tr>
+            <td>ADDRESS</td>
+            <td>{profileData.address}</td>
+          </tr>
+          <tr>
             <td>RM </td>
             <td>{profileData.rm}</td>
           </tr>
