@@ -35,6 +35,9 @@ const Confirm = () => {
                 console.log(error)
               }
             }
+            let plartformCharge = +(orders.total * 0.10).toFixed(2);
+            let formatedBill = orders.total - orders.dalivary_charge - plartformCharge
+            let frommatedBill = Number(formatedBill.toFixed(2)) 
             return (
               <>
                 <div className="card" key={orders._id}>
@@ -74,7 +77,11 @@ const Confirm = () => {
                     </div>
                     <div className="box">
                       <span>PLARTFORM CHARGE :</span>
-                      <span>10%</span>
+                      <span>{plartformCharge}</span>
+                    </div>
+                    <div className="box">
+                      <span>TOTAL BILL :</span>
+                      <span>{frommatedBill}</span>
                     </div>
                     <div className="btn-box">
                       <button onClick={cancelOrder}>CANCEL</button>
