@@ -26,8 +26,12 @@ const App = () => {
       if (resData.data.json.data === "DATA NOT FOUND") {
         localStorage.clear()
       }
+      if(resData.data.json.data==="ID IS BLOCKED !"){
+        alert(resData.data.json.data)
+        localStorage.clear()
+      }
     } catch (error) {
-      console.log(error)
+      console.log(error.message)
     }
   }
   useEffect(() => {

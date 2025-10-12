@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './setting.css'
 const Setting = () => {
   const [profilePic, setProfilePic] = useState(null)
   const [password, setPassword] = useState()
+  const [locationAuth, setLocationAuth] = useState()
+  const [locationData, setLocationData] = useState()
   const profilPicFormData = new FormData()
   profilPicFormData.append('profilepic', profilePic)
   const handelProfilePicData = async (e) => {
@@ -54,9 +56,52 @@ const Setting = () => {
       alert('PASSWORD IS INVALID')
     }
   }
+  const handelauthLocation = async () => {
+    try {
+      const resData = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/apip/user/location/auth/varyfy/${localStorage.getItem('id')}`)
+      if (resData.data.json.success === true) {
+        setLocationAuth(resData.data.json.success)
+      }
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+  const setLocationD = async () => {
+    try {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            setLocationData(
+              {
+                lat: pos.coords.latitude,
+                lon: pos.coords.longitude,
+              }
+            )
+          }
+        )
+      }
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+  const handelSetLocation = async (e) => {
+    try {
+      e.preventDefault()
+      setLocationD()
+      const resData = await axios.post(`${process.env.REACT_APP_LOCAL_F_URL}/apip/user/location/set/varyfy/${localStorage.getItem('id')}`, locationData)
+      if (resData.data.json.success === true) {
+        setLocationAuth(resData.data.json.success)
+      }
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
   const handelLogout = () => {
     localStorage.clear()
   }
+  useEffect(() => {
+    handelauthLocation()
+  }, [])
   return (
     <main className="main-div setting-div">
       <div className="setting-card">
@@ -76,6 +121,14 @@ const Setting = () => {
             <input type="password" name='oldpass' onChange={handelChangePasswordData} minLength={8} maxLength={8} placeholder='ENTER YOUR OLD PASSWORD' /> <br />
             <input type="password" name='newpass' onChange={handelChangePasswordData} minLength={8} maxLength={8} placeholder='ENTER YOUR NEW PASSWORD' />
             <button type='submit'>SUBMIT</button>
+          </fieldset>
+        </form>
+      </div>
+      <div className="setting-card">
+        <h3>AUTH LOCATION</h3>
+        <form>
+          <fieldset>
+            {locationAuth === true ? <><button>COMPLETED</button></> : <button onClick={handelSetLocation}>AUTH LOCTION</button>}
           </fieldset>
         </form>
       </div>

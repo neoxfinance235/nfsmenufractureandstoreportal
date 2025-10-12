@@ -7,7 +7,6 @@
     display: block;
     margin: auto;
     margin-top: 10px;
-    transform: translateY(60%);
 }
 
 .Login-div fieldset {
@@ -50,4 +49,20 @@
     border-color: blue;
     background-color: white;
     box-shadow: 0px 0px 5px 0.1px blue;
+}
+.Login-div h2{
+    padding: 5px;
+}
+.Login-div p{
+    padding: 10px;
+}
+.Login-div h3{
+    padding: 5px;
+}
+.Login-div li{
+    width: 80%;
+    display: block;
+    margin: auto;
+    list-style: circle;
+    margin-top: 5px;
 }

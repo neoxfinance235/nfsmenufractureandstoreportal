@@ -51,6 +51,21 @@ const Login = () => {
               <button type='reste'>RESET</button>
               <button onClick={handelSubmitLoginData}>LOGIN</button>
             </div>
+            <p></p>
+            <h2>Create Your Seller Account Today!</h2>
+            <h3>🌟 Mission & Purpose</h3>
+            <p><span className='c-r'><b>Neox</b></span><span className="c-b"><b> Financial </b></span><span className="c-dp"><b>Supporet</b></span> aims to empower unemployed individuals by offering tools for financial literacy, digital skills, freelancing, and online earning. The goal is to break the cycle of financial insecurity and build confidence, independence, and long-term growth.</p>
+            <p>They want to become a trusted financial support system for individuals, families, and businesses—making money management simple and stress-free.</p>
+            <h3>💡 Services & Values</h3>
+            <li>Empower people to budget, save, and invest wisely</li>
+            <li>Support startups and businesses with billing, payments, and planning</li>
+            <li>Build trust through transparency and customer-first support</li>
+            <li>Promote growth by preparing users for future opportunities</li>
+            <p>It’s positioned as more than just a financial platform—it’s a movement to uplift lives and redefine financial freedom.</p>
+            <p></p>
+            <p>Sign up now to access exclusive information and activate your account. Start selling and grow your business with us!</p>
+            <h2>Become a <span><b className="c-r">N</b></span> <span><b className="c-b">F</b></span> <span><b className="c-dp">S</b></span>  Seller Today!</h2>
+            <p>Sign up now to activate your seller account and unlock powerful tools for freelancing, financial growth, and digital success.</p>
             <span>YOU DONT HAVE ANY ACCOUNT / <NavLink to={'/singup/api/v4'}><li className='c-b'>SINGUP</li></NavLink> </span>
           </form>
         </main>
