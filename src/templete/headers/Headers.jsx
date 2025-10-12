@@ -2,7 +2,8 @@ import React from 'react'
 import './header.css'
 import icons from './icons.png'
 import { TiThMenu } from "react-icons/ti";
-
+import SingUp from '../singup/SingUp';
+import { NavLink } from 'react-router-dom'
 const Headers = () => {
   const handelOpenMenu = () => {
     document.getElementById('nav').style.display = 'block'

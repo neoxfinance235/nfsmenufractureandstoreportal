@@ -17,6 +17,7 @@ import Products from './templete/product/Products'
 import Cart from './templete/cart/Cart'
 import axios from 'axios'
 import { useEffect } from 'react'
+import SingUp from './templete/singup/SingUp'
 
 const App = () => {
   const hadnelAuth = async () => {
@@ -101,6 +102,10 @@ const App = () => {
       {
         path:'/login',
         element: <Login/>
+      },
+      {
+        path : '/singup/api/v4',
+        element : <><SingUp/></>    
       }
     ]
   )

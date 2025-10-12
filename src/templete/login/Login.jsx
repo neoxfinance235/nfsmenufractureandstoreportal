@@ -2,6 +2,7 @@ import {React , useState } from 'react'
 import './login.css'
 import icons from './icons.png'
 import axios from 'axios'
+import { Navigate, NavLink } from 'react-router-dom'
 const Login = () => {
   const [loginData , setLoginData] = useState()
   const hadnelSetLoginData = (e) =>{
@@ -50,6 +51,7 @@ const Login = () => {
               <button type='reste'>RESET</button>
               <button onClick={handelSubmitLoginData}>LOGIN</button>
             </div>
+            <span>YOU DONT HAVE ANY ACCOUNT / <NavLink to={'/singup/api/v4'}><li className='c-b'>SINGUP</li></NavLink> </span>
           </form>
         </main>
       </div>

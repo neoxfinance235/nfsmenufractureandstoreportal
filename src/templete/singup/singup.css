@@ -1,0 +1,67 @@
+.add-connector-div{
+    padding: 5px;
+    top: 0px;
+}
+.add-connector-div .back{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: blue;
+    padding: 2px;
+    color: white;
+    border-radius: 3px;
+}
+.add-connector-div form {
+    width: 100%;
+    padding: 5px;
+}
+.add-connector-div form fieldset{
+    padding: 5px;
+}
+.add-connector-div form fieldset legend{
+    padding: 5px;
+    border: 1px solid black;
+}
+.add-connector-div form fieldset input{
+    display: block;
+    margin: auto;
+    width: 100%;
+    font-size: 1rem;
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+.add-connector-div form .gender{
+    width: 100%;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.add-connector-div form .gender .gender-box input{
+    width: auto;
+    display: inline;
+    margin-right: 5px;
+}
+.add-connector-div form .gender .gender-box g{
+    display: flex;
+    align-items: center;
+}
+.add-connector-div form fieldset p{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.add-connector-div form .button-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.add-connector-div form .button-box button{
+    background-color: blue;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+}
