@@ -151,7 +151,10 @@ const Products = () => {
                           <span>COMBO : </span>
                           <span>{product.combo}</span>
                         </div>
-
+                        <div className="value">
+                          <span>MOP : </span>
+                          <span>{product.mop}</span>
+                        </div>
                       </div>
                       <div className="button-box">
                         <button onClick={postAddCart}><BiSolidCartAdd /></button>

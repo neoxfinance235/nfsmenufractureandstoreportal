@@ -50,10 +50,11 @@
     border: 1px solid white;
 }
 .product-main-div .product-contrenar .product-card {
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0px 0px 10px 0.1px gray inset;
     margin: 5px;
     height: auto;
+    border-radius: 10px;
 }
 
 .product-main-div .product-contrenar .product-card .product-header {

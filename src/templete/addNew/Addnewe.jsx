@@ -29,6 +29,7 @@ const Addnewe = () => {
             formData.append('key', `${productData.key1}`)
             formData.append('gender', productData.for)
             formData.append('type', productData.type)
+            formData.append('mop' , productData.mop)
             if (productImageData == null) {
                 alert('PLEASE SELECT A IMAGE OF PICTURES')
             }
@@ -93,6 +94,11 @@ const Addnewe = () => {
                                 <span>ALL</span>
                                 <input type="radio" onChange={handelSetProductData} name='for' value={"ALL"} />
                             </div>
+                        </div>
+                        <div className="gender-box">
+                            <h4>*Set minmum order price (MOP)</h4>
+                            <input type="number" required name='mop' onChange={handelSetProductData} placeholder='MOP'/>
+
                         </div>
                         <div className="type">
                             <h4>Select product type</h4>
