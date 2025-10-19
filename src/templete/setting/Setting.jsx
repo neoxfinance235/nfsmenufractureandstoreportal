@@ -128,7 +128,7 @@ const Setting = () => {
         <h3>AUTH LOCATION</h3>
         <form>
           <fieldset>
-            {locationAuth === true ? <><button>COMPLETED</button></> : <button onClick={handelSetLocation}>AUTH LOCTION</button>}
+            <button onClick={handelSetLocation}>AUTH LOCTION</button>
           </fieldset>
         </form>
       </div>
