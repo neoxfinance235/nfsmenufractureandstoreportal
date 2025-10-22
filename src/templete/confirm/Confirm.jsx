@@ -36,7 +36,7 @@ const Confirm = () => {
               }
             }
             let plartformCharge = +(orders.total * 0.10).toFixed(2);
-            let formatedBill = orders.total - orders.dalivary_charge - plartformCharge
+            let formatedBill = orders.total - plartformCharge
             let frommatedBill = Number(formatedBill.toFixed(2)) 
             return (
               <>
@@ -44,43 +44,51 @@ const Confirm = () => {
                   <img src={orders.product_pic} alt="" />
                   <div className="product-value">
                     <div className="box">
-                      <span>NAME :</span>
+                      <span>NAME </span>
                       <span>{orders.product_name}</span>
                     </div>
                     <div className="box">
-                      <span>PRICE :</span>
+                      <span>PRICE </span>
                       <span>{orders.price}</span>
                     </div>
                     <div className="box">
-                      <span>PRODUCT ID :</span>
+                      <span>PRODUCT ID </span>
                       <span>{orders.productId}</span>
                     </div>
                     <div className="box">
-                      <span>ORDER ID :</span>
+                      <span>ORDER ID </span>
                       <span>{orders.orderId}</span>
                     </div>
                     <div className="box">
-                      <span>QUANTITY :</span>
+                      <span>QUANTITY </span>
                       <span>{orders.quantity}</span>
                     </div>
                     <div className="box">
-                      <span>TOTAL :</span>
+                      <span>TOTAL </span>
                       <span>{orders.total}</span>
                     </div>
                     <div className="box">
-                      <span>ADDRESS :</span>
-                      <span>{`${orders.to_address} ${orders.customer_pin} ${orders.customer_district} ${orders.customer_state} ${orders.customer_country}`}</span>
+                      <span>ADDRESS </span>
+                      <span>{`${orders.to_address}`}</span>
                     </div>
                     <div className="box">
-                      <span>SHIPPING CHARGE :</span>
+                      <span>WEIGHT </span>
+                      <span>{orders.weaight} KG</span>
+                    </div>
+                    <div className="box">
+                      <span>SHIPPING CHARGE </span>
                       <span>{orders.dalivary_charge}</span>
                     </div>
                     <div className="box">
-                      <span>PLARTFORM CHARGE :</span>
+                      <span>DALIVARY TIME </span>
+                      <span>{orders.dalivary_time}</span>
+                    </div>
+                    <div className="box">
+                      <span>PLARTFORM CHARGE </span>
                       <span>{plartformCharge}</span>
                     </div>
                     <div className="box">
-                      <span>TOTAL BILL :</span>
+                      <span>TOTAL BILL </span>
                       <span>{frommatedBill}</span>
                     </div>
                     <div className="btn-box">

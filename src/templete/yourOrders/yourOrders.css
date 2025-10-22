@@ -4,3 +4,13 @@
     width: 100%;
     
 }
+.your-orders .card .product-value .box{
+    display: flex;
+    align-items: center;
+}
+.your-orders .card .product-value .box span{
+    padding: 5px;
+}
+.your-orders .card .product-value .box span:first-child{
+    font-weight: 700;
+}

@@ -16,3 +16,12 @@
     color: red;
     border-color: red;
 }
+.confirm-main-div .card .product-value .box{
+    padding: 5px;
+}
+.confirm-main-div .card .product-value .box span{
+    padding: 5px;
+}
+.confirm-main-div .card .product-value .box span:first-child{
+    font-weight: 700;
+}

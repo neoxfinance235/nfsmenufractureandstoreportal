@@ -80,6 +80,7 @@ nav ul li {
     text-align: center;
     margin-top: 2px;
     border: 2px solid white;
+    text-align: center;
 }
 
 nav ul li:hover {
@@ -101,6 +102,10 @@ nav ul li:hover {
 }
 .c-dp{
     color: deeppink;
+}
+#home-icon{
+    font-size: 1.2rem;
+    margin-right: 5px;
 }
 
 @media screen and (max-width:1000px) {
