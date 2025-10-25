@@ -76,14 +76,6 @@ const Confirm = () => {
                       <span>{orders.weaight} KG</span>
                     </div>
                     <div className="box">
-                      <span>SHIPPING CHARGE </span>
-                      <span>{orders.dalivary_charge}</span>
-                    </div>
-                    <div className="box">
-                      <span>DALIVARY TIME </span>
-                      <span>{orders.dalivary_time}</span>
-                    </div>
-                    <div className="box">
                       <span>PLARTFORM CHARGE </span>
                       <span>{plartformCharge}</span>
                     </div>

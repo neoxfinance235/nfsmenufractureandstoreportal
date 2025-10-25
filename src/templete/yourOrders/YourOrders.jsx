@@ -30,7 +30,7 @@ const YourOrders = () => {
                     </div>
                     <div className="box">
                       <span>PRICE </span>
-                      <span>{order.price}s</span>
+                      <span>{order.price} INR</span>
                     </div>
                     <div className="box">
                       <span>PRODUCT ID </span>
@@ -49,14 +49,6 @@ const YourOrders = () => {
                       <span>{order.total}</span>
                     </div>
                     <div className="box">
-                      <span>DALIVARY CHARGE  </span>
-                      <span> {order.dalivary_charge} </span>
-                    </div>
-                    <div className="box">
-                      <span>Time  </span>
-                      <span>{order.dalivary_time}</span>
-                    </div>
-                    <div className="box">
                       <span>COMBO  </span>
                       <span>{order.combo}</span>
                     </div>
@@ -69,12 +61,8 @@ const YourOrders = () => {
                       <span>CASH ON DALIVARY</span>
                     </div>
                     <div className="box">
-                      <span>WEAIGHT  </span>
-                      <span> KG</span>
-                    </div>
-                    <div className="box">
-                      <span>SUB TOTAL  </span>
-                      <span>{order.total + order.dalivary_charge} INR</span>
+                      <span>STATUS</span>
+                      <span>NOT CONFOREMD</span>
                     </div>
                     <div className="box1">
                       {

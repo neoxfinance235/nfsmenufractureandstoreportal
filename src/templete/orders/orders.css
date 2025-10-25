@@ -25,10 +25,11 @@
 .orders-main-div .card .product-value .box {
     display: flex;
     align-items: center;
-    padding: 5px;
     width: 100%;
 }
-
+.orders-main-div .card .product-value .box  span{
+    padding: 3px;
+}
 .orders-main-div .card .product-value .box1 {
     display: flex;
     align-items: center;

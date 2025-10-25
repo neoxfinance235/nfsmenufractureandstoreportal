@@ -7,7 +7,7 @@ const Products = () => {
   const [searchFilterValue, setSearchFilterValue] = useState()
   const getProductApi = async (e) => {
     try {
-      const resdata = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/api/get/all/product/api/global/data/product/v8/${localStorage.getItem('id')}?product=${searchFilterValue}`)
+      const resdata = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/api/get/all/product/api/global/data/product/v8/${localStorage.getItem('id')}`)
       resdata.data.json.success === false ? alert(resdata.data.json.data) : setProducts(resdata.data.json.data)
     } catch (error) {
       console.log(error)
@@ -134,6 +134,10 @@ const Products = () => {
                       <img src={product.productpic} alt="" className='product-image' />
                       <div className="product-value">
                         <div className="value">
+                          <span>NAME : </span>
+                          <span>{product.name}</span>
+                        </div>
+                        <div className="value">
                           <span>PRICE :</span>
                           <span>{product.price}</span>
                         </div>
@@ -150,10 +154,6 @@ const Products = () => {
                         <div className="value">
                           <span>COMBO : </span>
                           <span>{product.combo}</span>
-                        </div>
-                        <div className="value">
-                          <span>MOP : </span>
-                          <span>{product.mop}</span>
                         </div>
                       </div>
                       <div className="button-box">

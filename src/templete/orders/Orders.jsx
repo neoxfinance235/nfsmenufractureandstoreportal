@@ -35,6 +35,7 @@ const Orders = () => {
                 console.log(error)
               }
             }
+            let total = orders.total*0.10
             return (
               <>
                 <div className="card" key={orders._id}>
@@ -46,7 +47,7 @@ const Orders = () => {
                     </div>
                     <div className="box">
                       <span>PRICE :</span>
-                      <span>{orders.price}s</span>
+                      <span>{orders.price}</span>
                     </div>
                     <div className="box">
                       <span>PRODUCT ID :</span>
@@ -63,6 +64,18 @@ const Orders = () => {
                     <div className="box">
                       <span>TOTAL :</span>
                       <span>{orders.total}</span>
+                    </div>
+                    <div className="box">
+                      <span>PLARTFORM CHARGE :</span>
+                      <span>{total}</span>
+                    </div>
+                    <div className="box">
+                      <span>SUB TOTAL :</span>
+                      <span>{orders.total-total}</span>
+                    </div>
+                    <div className="box">
+                      <span>ETD : </span>
+                      <span>ETD</span>
                     </div>
                     <div className="box">
                       <span>ADDRESS </span>
