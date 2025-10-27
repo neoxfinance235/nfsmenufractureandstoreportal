@@ -14,11 +14,20 @@ const YourOrders = () => {
   useEffect(() => {
     getUserAllOrders()
   }, [])
+
   return (
     <>
       <main className="main-div  your-orders orders-main-div">
         {
           orderData === null ? <>NO DATA</> : orderData.map((order) => {
+            const UserCancilOrder = async () => {
+              try {
+                const resData = await axios.patch(`${process.env.REACT_APP_LOCAL_F_URL}/user/api/cancil/order/${localStorage.getItem("id")}?order_id=${order._id}`)
+                resData.data.json.success === false ? alert(resData.data.json.data) : window.location.reload()
+              } catch (error) {
+                console.log(error.message)
+              }
+            }
             return (
               <>
                 <div className="card" key={order._id}>
@@ -62,13 +71,28 @@ const YourOrders = () => {
                     </div>
                     <div className="box">
                       <span>STATUS</span>
-                      <span>NOT CONFOREMD</span>
+                      <span>{order.conform===true ? <>CONFIRMED</> : <>NOT CONFORMED</>}</span>
                     </div>
-                    <div className="box1">
-                      {
-                        order.dispatch === false ? <button >CANCEL</button> : <></>
-                      }
-                    </div>
+                    {
+                      order.conform !== true ?<div className="box1"> <button onClick={UserCancilOrder} >CANCEL</button> </div>: <>
+                        <div className="box">
+                          <span>DALIVARY TIME </span>
+                          <span>{order.dalivary_time}</span>
+                        </div>
+                        <div className="box">
+                          <span>Dalivary Charge </span>
+                          <span>{order.dalivary_charge}</span>
+                        </div>
+                        <div className="box">
+                          <span>dalivary company name </span>
+                          <span>{order.dalivery_compnay_name}</span>
+                        </div>
+                        <div className="box">
+                          <span>sub total </span>
+                          <span>{order.total+order.dalivary_charge}</span>
+                        </div>
+                      </>
+                    }
                   </div>
                 </div>
               </>

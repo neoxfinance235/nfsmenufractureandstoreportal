@@ -74,9 +74,17 @@ const Orders = () => {
                       <span>{orders.total-total}</span>
                     </div>
                     <div className="box">
-                      <span>ETD : </span>
-                      <span>ETD</span>
+                      <span>DALIVERY CHARGE :</span>
+                      <span>{orders.dalivary_charge}</span>
                     </div>
+                    <div className="box">
+                      <span>DALIVERY TIME :</span>
+                      <span>{orders.dalivary_time}</span>
+                    </div>
+                    <div className="box">
+                      <span>DALIVERY COMPANY NAME :</span>
+                      <span>{orders.dalivery_compnay_name}</span>
+                    </div>                     
                     <div className="box">
                       <span>ADDRESS </span>
                       <span>{`${orders.to_address} ${orders.customer_pin} ${orders.customer_district} ${orders.customer_state} ${orders.customer_country}`}</span>
