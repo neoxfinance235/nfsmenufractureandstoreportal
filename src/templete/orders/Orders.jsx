@@ -21,7 +21,7 @@ const Orders = () => {
           ordersData === null ? <>DATA IS LOADING</> : ordersData.map((orders) => {
             const cancelOrder = async () => {
               try {
-                const resData = await axios.patch(`${process.env.REACT_APP_LOCAL_F_URL}/api/menufracture/cancil/order/api/v8/${localStorage.getItem('id')}?product_id=${orders._id}`)
+                const resData = await axios.patch(`${process.env.REACT_APP_LOCAL_F_URL}/api/menufracture/conform/cancil/order/api/v8/${localStorage.getItem('id')}?product_id=${orders._id}`)
                 resData.data.json.success === false ? alert(resData.data.json.data) : window.location.reload()
               } catch (error) {
                 console.log(error)

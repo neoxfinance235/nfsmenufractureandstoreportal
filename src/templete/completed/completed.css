@@ -1,53 +1,29 @@
 .complete-main-div{
+    padding: 10px;
+}
+.complete-main-div .card{
+    width: 100%;
+    box-shadow: 0px 0px 15px 0.1px inset gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+.complete-main-div .card .value-box{
     padding: 5px;
 }
-.complete-main-div .box-contrenar{
-    width: 100%;
-}
-.complete-main-div .box-contrenar .box{
+.complete-main-div .card.value-box .value-box .box{
+    margin: 5px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
 }
-.complete-main-div .box-contrenar .auto{
-    transform: translateY(100%);
-}
-.sp{
-    position: fixed;
-    top: 60px;
-    width: 73%;
-}
-.complete-main-div .box-contrenar .sp span{
-    padding: 3px;
-    background-color: yellow;
-    text-align: center;
-    color: red;
+.complete-main-div .card .value-box .box span{
+    padding: 5px;
     font-weight: 700;
-    font-size: 1rem;
-    width: 33%;
-
 }
-.complete-main-div .box-contrenar .box1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.complete-main-div .card img{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    display: block;
+    margin: auto;
     margin-top: 5px;
-    border: 1px solid white;
-}
-.complete-main-div .box-contrenar .box1 span{
-    padding: 3px;
-    width: 33%;
-    text-align: center;
-    font-size: 1rem;
-}
-.complete-main-div .box-contrenar .box1:hover{
-    color: blue;
-    border: 1px solid black;
-}
-
-@media screen and (max-width:1000px) {
-    .sp{
-        width: 100%;
-    }
+    margin-bottom: 5px;
 }
