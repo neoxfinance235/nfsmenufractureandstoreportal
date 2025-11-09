@@ -18,6 +18,7 @@ import Cart from './templete/cart/Cart'
 import axios from 'axios'
 import { useEffect } from 'react'
 import SingUp from './templete/singup/SingUp'
+import ProductInfo from './templete/productInfo/ProductInfo'
 
 const App = () => {
   const hadnelAuth = async () => {
@@ -94,6 +95,10 @@ const App = () => {
       {
         path:'/api/user/cart/api/v4',
         element:<><Headers/><Nav/><Cart/></>
+      },
+      {
+        path:'/product/info/api/v4',
+        element:<><Headers/><Nav/><ProductInfo/></>
       }
     ]
   )

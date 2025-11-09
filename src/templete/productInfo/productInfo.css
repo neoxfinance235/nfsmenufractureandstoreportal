@@ -1,0 +1,113 @@
+.product-info-main-div{
+    padding: 5px;
+}
+.product-info-main-div form{
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+}
+.product-info-main-div form input{
+    font-size:1rem;
+    padding: 3px;
+    background-color: black;
+    color: aqua;
+    width: 70%;
+}
+.product-info-main-div form input::placeholder{
+    color: aqua;
+
+}
+.product-info-main-div form button{
+    padding: 3px;
+    font-size: 1rem;
+    width: 30%;
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+}
+.product-info-main-div form button:hover{
+    color: blue;
+    background-color: black;
+    border: 2px solid blue;
+}
+.product-info-main-div .product-value{
+    display: flex;
+    padding: 5px;
+}
+.product-info-main-div .product-value img{
+    width:300px ;
+    height: 300px;
+    background-color: black;
+    margin-right: 10px;
+}
+.product-info-main-div .product-value .product-details{
+    padding: 5px;
+    width: 50%;
+}
+.product-info-main-div .product-value .product-details .box{
+    padding: 5px;
+    display: flex;
+}
+.product-info-main-div .product-value .product-details .box span{
+    padding: 5px;
+}
+.product-info-main-div .product-value .product-details h3{
+    padding: 5px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+.product-info-main-div .company-details{
+    width: 100%;
+    padding: 5px;
+}
+.product-info-main-div .company-details h3{
+    width: 100%;
+    padding: 3px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+.product-info-main-div .company-details .box{
+    display: flex;
+}
+.product-info-main-div .company-details .box span{
+    padding: 5px;
+}
+.product-info-main-div .company-details .box1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.product-info-main-div .company-details .box1 button{
+    font-size: 2rem;
+    width: 50%;
+    background-color: yellow;
+    color: red;
+    font-weight: 700;
+    border: 2px solid blue;
+}
+.product-info-main-div .company-details .box1 button:hover{
+    background-color: white;
+    color: aqua;
+    border: 2px solid red;
+}
+
+
+@media  screen and (max-width:576px) {
+    .product-info-main-div .product-value{
+        display: block;
+    }
+    .product-info-main-div .product-value img{
+        margin: 0;
+        width: 100%;
+        display: block;
+        margin: auto;
+        min-height: 400px;
+        height: auto;
+    }
+    .product-info-main-div .product-value .product-details{
+        width: 100%;
+    }
+}

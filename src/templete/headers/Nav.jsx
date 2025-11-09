@@ -40,6 +40,7 @@ const Nav = () => {
           <NavLink to={'/api/user/get/products/api/v4'}><li><AiFillProduct id='home-icon'/>PRODUCTS</li></NavLink>
           <NavLink to={'/confirm/order/api/v4'}><li><MdOutlineWarning id='home-icon'/> CONFIRM</li></NavLink>
           <NavLink to={'/profile'}><li><FcAbout id='home-icon'/>PROFILE</li></NavLink>
+          <NavLink to={'/product/info/api/v4'}><li>PRODUCT INFO</li></NavLink>
           <NavLink to={'/api/user/cart/api/v4'}><li><FaShoppingCart id='home-icon'/>CART</li></NavLink>
           <NavLink to={'/report'}><li><MdReport id='home-icon'/>REPORT</li></NavLink>
           <NavLink to={'/setting'}><li><IoSettingsSharp id='home-icon'/>SETTING</li></NavLink>
