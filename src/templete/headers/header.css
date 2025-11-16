@@ -39,9 +39,11 @@ nav {
     margin-top: 2px;
     padding: 5px;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     z-index: 1;
     top: 58px;
+    padding-bottom: 150px;
+    overflow: auto;
 }
 
 nav .user-box {
@@ -112,6 +114,7 @@ nav ul li:hover {
     #nav{
         display: none;
         width: 40%;
+        top: 0;
     }
     #cross-btn{
         display: block;

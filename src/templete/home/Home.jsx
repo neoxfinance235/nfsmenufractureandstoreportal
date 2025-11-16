@@ -3,8 +3,8 @@ import './home.css'
 import axios from 'axios'
 
 const Home = () => {
-  const [dashbordData , setDashbordData] = useState('')
-  const getUserDashbordData = async () =>{
+  const [dashbordData, setDashbordData] = useState('')
+  const getUserDashbordData = async () => {
     try {
       const resData = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/api/data/user/dashbord/data/api/v8/${localStorage.getItem('id')}`)
       setDashbordData(resData.data.json.data)
@@ -12,11 +12,11 @@ const Home = () => {
       console.log(error)
     }
   }
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       getUserDashbordData()
-    },1000)
-  },[])
+    }, 1000)
+  }, [])
   return (
     <main className="main-div home-main-div">
       <h3>HELLO ! {localStorage.getItem('name')} IT'S YOUR DASHBORD</h3>
@@ -59,6 +59,12 @@ const Home = () => {
           <div className="card">
             <h4>NEW ORDER</h4>
             <p>{dashbordData.neworder}</p>
+          </div>
+        </div>
+        <div className="card-box">
+          <div className="card">
+            <h4>BALANCE</h4>
+            <p>{dashbordData.balance}</p>
           </div>
         </div>
       </div>

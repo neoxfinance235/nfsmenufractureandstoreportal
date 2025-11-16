@@ -2,7 +2,7 @@ import {React , useState } from 'react'
 import './login.css'
 import icons from './icons.png'
 import axios from 'axios'
-import { Navigate, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Login = () => {
   const [loginData , setLoginData] = useState()
   const hadnelSetLoginData = (e) =>{
@@ -23,6 +23,7 @@ const Login = () => {
         localStorage.setItem('profilepic' , resData.data.json.data.profilepic)
         localStorage.setItem('id' , resData.data.json.data.id)
         localStorage.setItem('phone' , resData.data.json.data.phone)
+        localStorage.setItem('type' , resData.data.json.data.type)
       }
       resData.data.json.success===false ? alert(resData.data.json.data) : window.location.reload()
     } catch (error) {

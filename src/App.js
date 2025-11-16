@@ -19,7 +19,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import SingUp from './templete/singup/SingUp'
 import ProductInfo from './templete/productInfo/ProductInfo'
-
+import Promoters from './templete/promoters/Promoters'
 const App = () => {
   const hadnelAuth = async () => {
     try {
@@ -45,7 +45,11 @@ const App = () => {
         element: <><Headers /><Nav /><Home /></>
       },
       {
-        path: "/",
+        path:'/',
+        element:<><Headers/><Nav/><Promoters/></>
+      },
+      {
+        path: "/dashbord",
         element: <><Headers /><Nav /><Home /></>
       },
       {

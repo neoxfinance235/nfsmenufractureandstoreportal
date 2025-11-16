@@ -13,6 +13,8 @@ import { FcAbout } from "react-icons/fc";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
 import { IoSettingsSharp } from "react-icons/io5";
+import { SiGoogleanalytics } from "react-icons/si";
+
 
 const Nav = () => {
   const handelCloseMenu = () => {
@@ -29,8 +31,8 @@ const Nav = () => {
           </div>
           <ImCross className='c-r' onClick={handelCloseMenu} id='cross-btn' />
         </div>
-        <ul>
-          <NavLink to={'/'} ><li><IoHomeSharp id='home-icon'/>HOME</li></NavLink>
+        <ul><NavLink to={'/'}><li><IoHomeSharp id='home-icon'/>SOCIAL</li></NavLink>
+          <NavLink to={'/dashbord'} ><li><SiGoogleanalytics id='home-icon'/>DASHBORD</li></NavLink>
           <NavLink to={'/add/new/product'}><li><AiOutlineAppstoreAdd id='home-icon'/>ADD NEW PRODUCT</li></NavLink>
           <NavLink to={'/all/products/api/v4'} ><li><RiLayout6Fill id='home-icon'/>ALL PRODUCTS</li></NavLink>
           <NavLink to={'/promote/product/v4'}><li>PROMOTE PRODUCTS</li></NavLink>
