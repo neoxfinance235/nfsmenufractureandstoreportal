@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import {NavLink} from 'react-router-dom'
 import './setting.css'
 const Setting = () => {
   const [profilePic, setProfilePic] = useState(null)
   const [password, setPassword] = useState()
   const [locationAuth, setLocationAuth] = useState()
   const [locationData, setLocationData] = useState()
+  const [authBank , setBank] = useState()
   const profilPicFormData = new FormData()
   profilPicFormData.append('profilepic', profilePic)
   const handelProfilePicData = async (e) => {
@@ -66,6 +68,14 @@ const Setting = () => {
       console.log(error.message)
     }
   }
+  const handelauthBank = async () => {
+    try {
+      const resData = await axios.get(`${process.env.REACT_APP_LOCAL_F_URL}/apip/user/bank/auth/varyfy/${localStorage.getItem('id')}`)
+      setBank(resData.data.json.success)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
   const setLocationD = async () => {
     try {
       if (navigator.geolocation) {
@@ -101,6 +111,7 @@ const Setting = () => {
   }
   useEffect(() => {
     handelauthLocation()
+    handelauthBank()
   }, [])
   return (
     <main className="main-div setting-div">
@@ -125,10 +136,18 @@ const Setting = () => {
         </form>
       </div>
       <div className="setting-card">
-        <h3>AUTH LOCATION</h3>
+        <h3>Verify Warehouse...</h3>
         <form>
           <fieldset>
-            <button onClick={handelSetLocation}>AUTH LOCTION</button>
+            {locationAuth===false ? <button onClick={handelSetLocation}>RAGISTER WAREHOUSE</button> : <button style={{color:'green',backgroundColor:'white' , border:'none'}}>VERIFIED</button>}            
+          </fieldset>
+        </form>
+      </div>
+      <div className="setting-card">
+        <h3>Bank Verify...</h3>
+        <form>
+          <fieldset>
+            {authBank===true ? <button style={{color:'green',backgroundColor:'white' , border:'none'}}>VERIFIED</button> : <button><NavLink to={'/api/menufrcature/add/bank/pi/v8'}>PENDING</NavLink></button>}          
           </fieldset>
         </form>
       </div>

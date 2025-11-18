@@ -20,6 +20,7 @@ import { useEffect } from 'react'
 import SingUp from './templete/singup/SingUp'
 import ProductInfo from './templete/productInfo/ProductInfo'
 import Promoters from './templete/promoters/Promoters'
+import AddBank from './templete/addBank/AddBank'
 const App = () => {
   const hadnelAuth = async () => {
     try {
@@ -103,6 +104,11 @@ const App = () => {
       {
         path:'/product/info/api/v4',
         element:<><Headers/><Nav/><ProductInfo/></>
+      },
+      ///////////////////////payment route//////////////
+      {
+        path:'/api/menufrcature/add/bank/pi/v8',
+        element:<><Headers/><Nav/><Setting/><AddBank/></>
       }
     ]
   )
